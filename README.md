@@ -1,21 +1,40 @@
-# NASM Assembly
+# Week 8 Exercises
 
-A Codepsaces template for building, running, and debugging assembly programs
-using the NASM assembler.
+## reverse-array.asm
 
-Intended for a course in *Computer Organization*, this template includes
-tasks for building the assembly source file that is currently open in the editor.
-Two build options are included: one for building a pure assembly program
-requiring no external libraries (*nasm - Assemble/link/debug active file*),
-and another for building an assembly program to be linked with the
-C library (*nasmc - Assemble/link/debug active file w/ C library*).
+Using the process stack, reverse the values in an array of quadwords.
+A sample array is defined at *array*. Upon completion, *array* should
+contain the same values but in the reverse of their initial order.
 
-Two sample programs are included:
+## reverse-string.asm
 
-- ***hello-world.asm*** - Writes "Hello World!" to the console using the
-*syscall* instruction. This file may be built and run using only assembly
-instructions - no linking with external libraries is necessary. The program
-entry point is *_start*.
-- ***hello-world-c.asm*** - Writes "Hello World!" to the console using the
-*printf* function from the C library. This file must be linked with the
-C library. The program entry point is *main*.
+Using the process stack, reverse the characters in the null-terminated
+string at *str1*. Upon completion, *str1* should contain the same characters
+but in the reverse of their initial order. Further, the null terminator
+should remain in its original position.
+
+A second string, *str2*, is defined so that memory may be observed to
+ensure that the code does not overrun the original string.
+
+## print-stars-1.asm
+
+The starter code includes code for printing a single asterisk and for 
+printing a newline character. Turn these into functions, then write a
+loop to print the number of stars indicated by variable *n* followed by
+a newline.
+
+## print-stars-2.asm
+
+Incorporate the two functions from the previous example into this program.
+Using these functions, write a program that prints *nrows* rows of
+*ncols* asterisks.
+
+For example, if *nrows* is 4 and *ncols* is 6, the output should look like
+this:
+
+```
+******
+******
+******
+******
+```
